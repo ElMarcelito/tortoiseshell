@@ -12,6 +12,10 @@ html {
   justify-content: space-between;
 }
 
+.company {
+  white-space: nowrap;
+}
+
 header {
   position: relative;
   top: 1rem;
@@ -180,6 +184,7 @@ footer span {
   }
   .main {
     height: 22rem;
+    background-position: 40% 50%;
   }
   .container {
     width: 100%;
@@ -197,7 +202,7 @@ footer span {
 @media only screen and (max-width: 650px) {
   .main {
     height: 17rem;
-    background-position: center;
+    background-position: 35% 50%;
   }
   .company {
     display: none;
@@ -252,6 +257,7 @@ footer span {
   .bizinfo h1 {
     width: 100%;
     text-align: center;
+    padding: 0.5rem 0;
   }
   .bizinfo p {
     font-size: 0.77rem;

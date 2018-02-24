@@ -15,10 +15,12 @@ html {
 header {
   position: relative;
   top: 1rem;
-  height: 3rem;
+  height: 3.5rem;
   background-color: cadetblue;
   color: white;
   vertical-align: middle;
+  display: flex;
+  align-items: center;
 }
 
 header img {
@@ -37,13 +39,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 1rem 2rem;
+  margin: 1rem 1rem 1rem 0;
 }
 
 nav li {
   list-style: none;
   display: inline-block;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mobilenav {
+  margin-right: 2rem;
+  display: none;
 }
 
 .main {
@@ -58,15 +66,19 @@ nav li {
 
 .headline {
   position: absolute;
-  top: 13rem;
+  top: 13.5rem;
   right: -2rem;
-  padding: 1.5rem 5rem;
+/*  padding: 1.5rem 5rem;   */
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
   color: black;
   background-color: white;
   text-transform: uppercase;
+}
+
+.headline span {
+  margin: 1.5rem 5rem;
 }
 
 .services {
@@ -129,6 +141,7 @@ nav li {
   margin-bottom: 1rem;
   display: block;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .bizinfo p {
@@ -156,7 +169,100 @@ footer img {
   height: 1.5rem;
 }
 
-header img {
-  margin-right: 1rem;
-  height: 1.5rem;
+footer span {
+  margin-right: 4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    top: 0;
+    width: 100%;
+  }
+  .main {
+    height: 22rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .headline {
+    top: 8.5rem;
+    right: 2rem;
+    font-size: 1.33rem;
+  }
+  .headline span {
+    margin: 1.5rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main {
+    height: 17rem;
+    background-position: center;
+  }
+  .company {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  .mobilenav {
+    display: inline-block;
+  }
+  .headline {
+    font-size: 1rem;
+    width: 100%;
+    top: 12.5rem;
+    right: 0;
+  }
+  .headline span {
+    margin: 1rem;
+    width: 100%;
+    text-align: center;
+    line-height: .5;
+  }
+  .services {
+    margin: 0;
+  }
+  .services .container {
+    flex-flow: column;
+    align-items: center;
+    margin: 3.77rem 0 2.23rem 0;
+    font-size: .77rem;
+    line-height: 1.4;
+  }
+  .service {
+    width: 100%;
+    margin-bottom: 1.54rem;
+    justify-content: flex-start;
+    height: auto;
+  }
+  .service span {
+    margin-top: 1rem;
+  }
+  .about {
+    margin-bottom: 0;
+  }
+  .about .container {
+    flex-flow: column;
+  }
+  .bizinfo {
+    width: 100%;
+    margin: 0;
+  }
+  .bizinfo h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .bizinfo p {
+    font-size: 0.77rem;
+    line-height: 1.4;
+    margin-left: 0.25rem;
+    margin-bottom: 4rem;
+  }
+  footer .container {
+    justify-content: center;
+  }
+  footer img {
+    margin: 0;
+  }
 }
